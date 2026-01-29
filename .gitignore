@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+
+# Production build (compiled JS)
+dist/
+build/
+
+# Environment variables (Crucial for security)
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS junk files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+*.sln
+*.njsproj
+
+# Testing coverage
+coverage/
+
+# Supabase (if using local dev CLI)
+supabase/functions/*/deno.lock
