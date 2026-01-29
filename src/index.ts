@@ -12,6 +12,10 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
+app.get("/health", (req, res) => {
+  res.status(200).send("API is healthy");
+});
+
 app.use("/api/projects", projectRoutes);
 app.use("/api/experiences", experienceRoutes);
 
@@ -20,5 +24,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Server is running on ${PORT}`);
 });
